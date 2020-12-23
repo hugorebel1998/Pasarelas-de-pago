@@ -1,0 +1,1 @@
+<small>Seras redireccinada a la pagina oficial de Stripe</small>
