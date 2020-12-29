@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Dotenv\Loader\Value;
 use Illuminate\Http\Request;
+
 
 class PaymentController extends Controller
 {
@@ -19,6 +19,15 @@ class PaymentController extends Controller
         // var_dump($request);
         // die();
         return $request->all();
+    }
+
+    public function approval(){
+        //
+    }
+
+    public function cancelled(){
+
+        //
     }
 
 }
