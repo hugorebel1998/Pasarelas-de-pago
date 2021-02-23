@@ -15,7 +15,7 @@ class PaypalService
 	
 	public function __construct()
 	{
-		# code...
+
 		$this->baseUri= config('services.paypal.base_uri');
 		$this->clientId= config('services.paypal.client_id');
         $this->clientSecret= config('services.paypal.secret');
@@ -24,18 +24,18 @@ class PaypalService
  
 	public function resolveAuthorization(&$queryParams, &$formParams, &$headers)
 	{
-		# code...
+		
 		$headers['Authorization'] = $this->resolveAccessToken();
 	}
  
 	public function decodeResponse($response)
 	{
-		# code...
+		
 		return json_decode($response);
 	}
 	public function resolveAccessToken()
 	{
-		# code...
+		
 		$credentials = base64_encode("{$this->clientId}:{$this->clientSecret}");
  
 		return "Basic {$credentials}";
