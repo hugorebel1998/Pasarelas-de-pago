@@ -81,7 +81,7 @@
         </nav>
 
         <main class="py-4">
-            {{-- <div class="container">
+             <div class="container">
                 @if (isset($errors) && $errors->any())
                     <div class="alert alert-danger">
                         <ul>
@@ -101,7 +101,7 @@
                         </ul>
                     </div>
                 @endif
-            </div> --}}
+            </div> 
             @yield('content')
         </main>
     </div>
