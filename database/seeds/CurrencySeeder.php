@@ -15,7 +15,8 @@ class CurrencySeeder extends Seeder
         $currencies = [
             'usd',
             'eur',
-            'gbp'
+            'gbp',
+            'jpy'
         ];
 
         foreach ($currencies as $currency) {
