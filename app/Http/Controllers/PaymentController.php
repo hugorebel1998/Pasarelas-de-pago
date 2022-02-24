@@ -21,13 +21,14 @@ class PaymentController extends Controller
 
     public function pay(Request $request)
     {
-        $rules = [
-            'value' => ['required', 'numeric', 'min:5'],
-            'currency' => ['required', 'exists:currencies,iso'],
-            'payment_platform' => ['required', 'exists:payment_platforms,id']
-        ];
 
-        $request->validate($rules);
+         $request->validate([
+            'value' => 'required|numeric|min:5',
+            'currency' => 'required|exists:currencies,iso',
+            'payment_platform' => 'required|exists:payment_platforms,id'
+         ]);
+
+      
         // dd($request->all());
         // $paymentPlatform = resolve(PayPalService::class);
         $paymentPlatform = $this->paymentPlatformResolver
